@@ -1215,3 +1215,6 @@ zoomd.com,88478941,RESELLER
 #Pangle
 pangleglobal.com, 5032539, DIRECT
 pubmatic.com, 161490, RESELLER, 5d62403b186f2ace
+
+#Chartboost
+chartboost.com,68c5446e78fde16c15fbe1c3,DIRECT

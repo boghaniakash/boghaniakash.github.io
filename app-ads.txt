@@ -1211,3 +1211,7 @@ zmaticoo.com,5135063,RESELLER
 zmaticoo.com,5135224,RESELLER
 zmaticoo.com,5135302,RESELLER
 zoomd.com,88478941,RESELLER
+
+#Pangle
+pangleglobal.com, 5032539, DIRECT
+pubmatic.com, 161490, RESELLER, 5d62403b186f2ace

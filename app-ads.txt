@@ -46,6 +46,10 @@ uis.mobfox.com, 2444, RESELLER, 5529a3d1f59865be
 pubmatic.com, 156451, RESELLER, 5d62403b186f2ace
 improvedigital.com, 2417, RESELLER
 
+#GameAdZone
+google.com, pub-2960293519697422, DIRECT, f08c47fec0942fa0
+gameadzone.com, 2065, DIRECT
+
 #Meta
 facebook.com, 278047686273547, DIRECT, c3e20eee3f780d68
 

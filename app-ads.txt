@@ -416,6 +416,8 @@ sharethrough.com, OAW69Fon, RESELLER, d53b998a7bd4ecd2
 
 #Geniee
 genieesspv.jp, 224008, DIRECT
+genieesspv.jp, 224062, RESELLER
+genieesspv.jp, 224063, RESELLER
 
 #RTB
 openx.com, 562132006, RESELLER, 6a698e2ec38604c6

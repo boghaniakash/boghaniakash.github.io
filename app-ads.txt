@@ -77,15 +77,6 @@ g-global.net, 21977, DIRECT
 datawrkz.com, mwpmcm943, DIRECT
 google.com, pub-8856559311549217, RESELLER, f08c47fec0942fa0
 
-#Greedygame
-#Premium Programmatic Demand by publisher@greedygame.com
-greedygame.com, 3562823318062048, DIRECT
-google.com, pub-1067374679252537, RESELLER, f08c47fec0942fa0
-google.com, pub-2749054827332983, RESELLER, f08c47fec0942fa0
-pubmatic.com, 161480, RESELLER, 5d62403b186f2ace
-pubmatic.com, 162539, RESELLER, 5d62403b186f2ace
-google.com,pub-4686405784285870, RESELLER, f08c47fec0942fa0
-
 #jungle
 thejungletechnology.com, 161034, DIRECT
 pixelverge.com, 161034, DIRECT

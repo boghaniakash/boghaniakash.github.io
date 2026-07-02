@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About – Akash Boghani</title>
+<meta name="description" content="About Akash Boghani — independent iOS & Android app developer based in Surat, India.">
+<meta name="theme-color" content="#07070d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffb340'/%3E%3Cstop offset='1' stop-color='%23ff5e2b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='15' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial,Helvetica,sans-serif' font-size='34' font-weight='800' text-anchor='middle' fill='%2307070d'%3EA%3C/text%3E%3C/svg%3E">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap');
+  :root {
+    --bg:#07070d; --card:#12121d; --card-2:#161624; --line:rgba(255,255,255,.08);
+    --ink:#f3f0e8; --muted:#a2a1b5; --amber:#ffb340; --ember:#ff5e2b;
+    --grad:linear-gradient(115deg,var(--amber),var(--ember));
+    --display:'Syne',sans-serif; --body:'DM Sans',sans-serif; --mono:'DM Mono',monospace;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--ink); font-family:var(--body); line-height:1.7; overflow-x:hidden; }
+  ::selection { background:rgba(255,179,64,.28); }
+
+  .grain { position:fixed; inset:0; pointer-events:none; z-index:99; opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+  .beam { position:fixed; top:-30%; left:-18%; width:70%; height:110%; pointer-events:none; z-index:0;
+    background:linear-gradient(115deg, rgba(255,179,64,.13), rgba(255,94,43,.04) 45%, transparent 70%);
+    filter:blur(46px); mix-blend-mode:screen; animation:flicker 8s ease-in-out infinite; }
+  @keyframes flicker { 0%,100%{opacity:.75} 42%{opacity:1} 58%{opacity:.6} 74%{opacity:.9} }
+
+  header { position:sticky; top:0; z-index:80; display:flex; align-items:center; justify-content:space-between;
+    gap:1rem; flex-wrap:wrap; padding:1.3rem 2rem; border-bottom:1px solid transparent;
+    transition:background .35s, border-color .35s, backdrop-filter .35s; }
+  header.scrolled { background:rgba(7,7,13,.72); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); border-color:var(--line); }
+  .logo { font-family:var(--display); font-weight:800; font-size:1.25rem; letter-spacing:-.5px; color:var(--ink); text-decoration:none; }
+  .logo span { background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  nav { display:flex; gap:1.7rem; flex-wrap:wrap; }
+  nav a { color:var(--muted); text-decoration:none; font-size:.88rem; position:relative; transition:color .25s; }
+  nav a::after { content:''; position:absolute; left:0; bottom:-5px; width:100%; height:1.5px; background:var(--grad);
+    transform:scaleX(0); transform-origin:left; transition:transform .3s cubic-bezier(.2,.7,.2,1); }
+  nav a:hover { color:var(--ink); } nav a:hover::after { transform:scaleX(1); }
+  nav a.active { color:var(--ink); } nav a.active::after { transform:scaleX(1); }
+
+  .main { position:relative; z-index:1; max-width:760px; margin:0 auto; padding:5rem 2rem 6rem; }
+
+  .fade { opacity:0; animation:riseIn .85s cubic-bezier(.2,.7,.2,1) forwards; animation-delay:var(--d,0s); }
+  @keyframes riseIn { from{opacity:0; transform:translateY(26px)} to{opacity:1; transform:translateY(0)} }
+
+  .badge { display:inline-flex; align-items:center; gap:.55rem; font-family:var(--mono); font-size:.72rem;
+    letter-spacing:2.5px; text-transform:uppercase; color:var(--amber);
+    border:1px solid rgba(255,179,64,.3); background:rgba(255,179,64,.08);
+    padding:.4rem 1rem; border-radius:999px; margin-bottom:1.6rem; }
+  .badge::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--amber);
+    box-shadow:0 0 10px var(--amber); animation:pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse { 50%{opacity:.35; transform:scale(.8)} }
+
+  h1 { font-family:var(--display); font-size:clamp(2.1rem,5vw,3.4rem); font-weight:800; letter-spacing:-1.6px; margin-bottom:1.6rem; line-height:1.1; }
+  h1 em { font-style:normal;
+    background:linear-gradient(115deg,var(--amber),var(--ember),var(--amber));
+    background-size:220% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:shimmer 5.5s ease-in-out infinite; }
+  @keyframes shimmer { 0%,100%{background-position:0% 0} 50%{background-position:100% 0} }
+
+  .main p { color:var(--muted); font-size:1rem; margin-bottom:1.2rem; font-weight:300; }
+
+  .info-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1rem; margin:3rem 0; }
+  .info-card { background:linear-gradient(180deg,var(--card-2),var(--card)); border:1px solid var(--line);
+    border-radius:14px; padding:1.5rem; position:relative; overflow:hidden;
+    transition:transform .3s cubic-bezier(.2,.7,.2,1), border-color .3s, box-shadow .3s; }
+  .info-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px;
+    background:var(--grad); transform:scaleX(0); transform-origin:left; transition:transform .4s cubic-bezier(.2,.7,.2,1); }
+  .info-card:hover { transform:translateY(-5px); border-color:rgba(255,179,64,.35); box-shadow:0 18px 36px -18px rgba(255,130,50,.35); }
+  .info-card:hover::before { transform:scaleX(1); }
+  .info-label { font-family:var(--mono); font-size:.68rem; text-transform:uppercase; letter-spacing:2px; color:var(--amber); margin-bottom:.45rem; }
+  .info-value { font-family:var(--display); font-weight:700; font-size:.98rem; letter-spacing:-.2px; }
+  .info-value a { color:var(--ink); text-decoration:none; }
+  .info-value a:hover { color:var(--amber); }
+
+  footer { position:relative; z-index:1; border-top:1px solid var(--line); text-align:center; padding:2.4rem 2rem; color:var(--muted); font-size:.85rem; }
+  footer a { color:var(--amber); text-decoration:none; }
+  footer a:hover { text-decoration:underline; }
+
+  @media (max-width:560px) {
+    header { padding:1.1rem 1.2rem; } nav { gap:1.1rem; } nav a { font-size:.8rem; }
+    .main { padding:3.6rem 1.3rem 4.5rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+    .fade { opacity:1; }
+  }
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="beam" aria-hidden="true"></div>
+
+<header id="nav">
+  <a class="logo" href="https://boghaniakash.github.io/">Akash <span>Boghani</span></a>
+  <nav>
+    <a href="https://boghaniakash.github.io/">Home</a>
+    <a class="active" href="https://boghaniakash.github.io/about-page.html">About</a>
+    <a href="https://boghaniakash.github.io/privacy-policy.html">Privacy Policy</a>
+    <a href="https://boghaniakash.github.io/contact-page.html">Contact</a>
+  </nav>
+</header>
+
+<div class="main">
+  <div class="badge fade">About Me</div>
+  <h1 class="fade" style="--d:.1s">Hi, I'm <em>Akash Boghani</em></h1>
+  <p class="fade" style="--d:.2s">I am an independent mobile application developer based in Surat, India. I design, build, and publish my own iOS and Android applications for the general public.</p>
+  <p class="fade" style="--d:.28s">I am the sole owner and developer of all the apps I publish. I am personally responsible for the development, maintenance, customer support, and quality of every application I release.</p>
+  <p class="fade" style="--d:.36s">My goal is to build simple, useful, and well-designed apps that make everyday life easier and more enjoyable for people around the world.</p>
+  <p class="fade" style="--d:.44s">I currently develop and publish apps independently under my own name. I handle all aspects of the business including app development, marketing, advertising, and customer support — entirely on my own.</p>
+
+  <div class="info-grid fade" style="--d:.55s">
+    <div class="info-card">
+      <div class="info-label">Full Name</div>
+      <div class="info-value">Akash Boghani</div>
+    </div>
+    <div class="info-card">
+      <div class="info-label">Location</div>
+      <div class="info-value">Surat, Gujarat, India</div>
+    </div>
+    <div class="info-card">
+      <div class="info-label">Platforms</div>
+      <div class="info-value">iOS &amp; Android</div>
+    </div>
+    <div class="info-card">
+      <div class="info-label">Business Type</div>
+      <div class="info-value">Independent Developer</div>
+    </div>
+    <div class="info-card">
+      <div class="info-label">Email</div>
+      <div class="info-value"><span id="em"></span><script>var u="akashboghani111",d="gmail.com";document.getElementById("em").innerHTML="<a href=\"mailto:"+u+"@"+d+"\">"+u+"@"+d+"</a>";</script></div>
+    </div>
+    <div class="info-card">
+      <div class="info-label">App</div>
+      <div class="info-value">MovieBox – Movies &amp; Shows</div>
+    </div>
+  </div>
+
+  <p class="fade" style="--d:.65s">All apps I advertise through Google Ads are entirely owned by me. I create all advertising content, manage my own Google Ads account, and am fully responsible for the goods and services I promote.</p>
+</div>
+
+<footer>
+  <p>© 2026 Akash Boghani · Independent App Developer · Surat, India</p>
+  <p style="margin-top:0.5rem"><a href="https://boghaniakash.github.io/privacy-policy.html">Privacy Policy</a> · <a href="https://boghaniakash.github.io/contact-page.html">Contact</a></p>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY>12); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+})();
+</script>
+
+</body>
+</html>
